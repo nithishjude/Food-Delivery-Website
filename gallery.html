@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodMunch | Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/app.js"></script>
+</head>
+
+<body data-page="gallery">
+    <header class="hero hero-compact">
+        <nav class="primary-nav">
+            <a class="brand" href="FOOD WEBSITE.html">
+                <div class="brand-mark">FM</div>
+                <div>
+                    <p class="brand-name">FoodMunch</p>
+                    <p class="brand-tag">Curated plates near you</p>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="FOOD WEBSITE.html#discover">Discover</a>
+                <a href="menu.html">Menu</a>
+                <a href="order.html">Orders</a>
+                <a class="active" href="gallery.html">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="ghost-btn" type="button">Get the App</button>
+        </nav>
+        <div class="page-intro">
+            <p class="eyebrow">Visual stories</p>
+            <h1>Go behind the pass with FoodMunch partners.</h1>
+            <p class="page-lede">Peek into the plating line, the glow of late-night dining rooms, and the desserts that light up your feed.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Plates & spaces</p>
+                    <h2>Scroll-worthy food moments</h2>
+                </div>
+                <a class="text-link" href="FOOD WEBSITE.html#discover">See partner list</a>
+            </div>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Wood-fired pizza being sliced">
+                    <figcaption>Wood-fired pies from Midnight Dough Lab.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=80" alt="Chef plating pasta">
+                    <figcaption>Table-side plating during chef takeovers.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=80" alt="Stack of bao buns">
+                    <figcaption>Late-night bao towers from Bao Collective.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=900&q=80" alt="Minimal dining room interior">
+                    <figcaption>Minimal interiors set the mood for slow dinners.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80" alt="Colorful salad bowls on a table">
+                    <figcaption>Vegan spreads layered with citrus, seeds, and crunch.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80" alt="Festive biryani pot with spices">
+                    <figcaption>Slow-smoked biryani ready for sealing and delivery.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="collections">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Next step</p>
+                    <h2>Ready to taste the feed?</h2>
+                </div>
+                <a class="text-link" href="menu.html">Build a cart</a>
+            </div>
+            <div class="collection-grid">
+                <article class="collection-card">
+                    <p class="badge">Menu</p>
+                    <h3>Menu Studio</h3>
+                    <p>Full ingredient lists, allergens, and wine pairings.</p>
+                    <a class="text-link" href="menu.html">See menu →</a>
+                </article>
+                <article class="collection-card">
+                    <p class="badge">Orders</p>
+                    <h3>Order Lab</h3>
+                    <p>Add shots from this gallery straight to your tray.</p>
+                    <a class="text-link" href="order.html">Order now →</a>
+                </article>
+                <article class="collection-card">
+                    <p class="badge">App</p>
+                    <h3>FoodMunch Live</h3>
+                    <p>Drop-ins from chefs, collabs, and seat alerts.</p>
+                    <a class="text-link" href="#contact">Get notified →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div>
+                <h2>Stay in the FoodMunch loop</h2>
+                <p>Get launch invites, private tables, and chef collabs in your inbox.</p>
+            </div>
+            <form class="cta-form">
+                <label class="sr-only" for="emailInput">Email address</label>
+                <input id="emailInput" type="email" placeholder="you@example.com" required>
+                <button class="solid-btn" type="submit">Notify me</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> FoodMunch. Crafted for modern food lovers.</p>
+        <a class="text-link" href="#top">Back to top ↑</a>
+    </footer>
+</body>
+
+</html>

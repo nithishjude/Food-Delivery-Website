@@ -4,95 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodMunch | Menu Studio</title>
+    <title>FoodMunch | Order Online</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script defer src="assets/js/app.js"></script>
 </head>
 
 <body data-page="menu">
-    <header class="hero hero-compact">
-        <nav class="primary-nav">
+    <header class="sub-hero">
+        <nav class="top-nav">
             <a class="brand" href="FOOD WEBSITE.html">
                 <div class="brand-mark">FM</div>
                 <div>
                     <p class="brand-name">FoodMunch</p>
-                    <p class="brand-tag">Curated plates near you</p>
+                    <p class="brand-tagline">Powered by the Zomato workflow</p>
                 </div>
             </a>
             <div class="nav-links">
-                <a href="FOOD WEBSITE.html#discover">Discover</a>
-                <a class="active" href="menu.html">Menu</a>
+                <a href="FOOD WEBSITE.html">Home</a>
+                <a class="active" href="menu.html">Order Online</a>
+                <a href="gallery.html">Dining & Nightlife</a>
                 <a href="order.html">Orders</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="#contact">Contact</a>
             </div>
-            <button class="ghost-btn" type="button">Get the App</button>
+            <div class="nav-ctas">
+                <button class="ghost-btn" type="button">Log in</button>
+                <button class="solid-btn" type="button">Sign up</button>
+            </div>
         </nav>
-        <div class="page-intro">
-            <p class="eyebrow">Menu Studio</p>
-            <h1>Chef-crafted plates, ready when you are.</h1>
-            <p class="page-lede">Swipe through seasonal specials, late-night pop-ups, and plant-forward plates. Tap any dish to drop it into your cart instantly.</p>
+        <div class="sub-hero-content">
+            <p class="eyebrow">Order Online</p>
+            <h1>Food delivery in <span id="menuCityLabel">Bengaluru</span></h1>
+            <p>All-new filters, lightning-fast delivery slots, and live offers just like Zomato’s official experience.</p>
+            <div class="service-switch compact" id="menuServiceTabs" role="tablist" aria-label="Delivery filters">
+                <button class="service-chip active" type="button" data-service="delivery" role="tab" aria-selected="true">Delivery</button>
+                <button class="service-chip" type="button" data-service="dining" role="tab" aria-selected="false">Dining out</button>
+                <button class="service-chip" type="button" data-service="nightlife" role="tab" aria-selected="false">Nightlife</button>
+            </div>
         </div>
     </header>
 
     <main>
+        <section class="filter-toolbar">
+            <div class="chip-row" id="menuFilterChips">
+                <button class="filter-chip" type="button" data-filter="rating">Rating 4.0+</button>
+                <button class="filter-chip" type="button" data-filter="pureveg">Pure Veg</button>
+                <button class="filter-chip" type="button" data-filter="new">Newly Opened</button>
+                <button class="filter-chip" type="button" data-filter="offers">Great Offers</button>
+                <button class="filter-chip" type="button" data-filter="distance">Less than 5 km</button>
+            </div>
+            <label class="sort-control" for="menuSort">
+                Sort by
+                <select id="menuSort">
+                    <option value="rating">Rating: High to Low</option>
+                    <option value="deliveryTime">Delivery Time</option>
+                    <option value="cost">Cost for Two</option>
+                </select>
+            </label>
+        </section>
+
+        <section class="restaurant-feed">
+            <p class="results" id="menuResultsCount">Loading restaurants…</p>
+            <div class="restaurant-grid" id="menuRestaurantGrid"></div>
+        </section>
+
         <section class="menu-showcase">
             <div class="section-head">
                 <div>
-                    <p class="eyebrow">Chef-led menu</p>
-                    <h2>Tap to add dishes to your order</h2>
+                    <h2>Chef special dishes</h2>
+                    <p>Tap a tile to add it to your cart instantly.</p>
                 </div>
-                <p class="section-subtext">Free delivery on every cart above Rs 700 · Vegan and gluten-free filters coming soon</p>
+                <a class="text-link" href="order.html">Go to cart →</a>
             </div>
             <div class="menu-grid" id="menuGrid"></div>
-        </section>
-
-        <section class="collections">
-            <div class="section-head">
-                <div>
-                    <p class="eyebrow">Need inspo?</p>
-                    <h2>Popular pairings this week</h2>
-                </div>
-                <a class="text-link" href="order.html">Jump to orders</a>
-            </div>
-            <div class="collection-grid">
-                <article class="collection-card">
-                    <p class="badge">Comfort</p>
-                    <h3>Ramen + Bao</h3>
-                    <p>Silky truffle miso ramen with a bao flight for late-night binge sessions.</p>
-                </article>
-                <article class="collection-card">
-                    <p class="badge">Brunch</p>
-                    <h3>Tacos + Matcha Cake</h3>
-                    <p>Street taco trio finished with molten matcha cake for sweet-lovers.</p>
-                </article>
-                <article class="collection-card">
-                    <p class="badge">Chef's pick</p>
-                    <h3>Biryani Feast</h3>
-                    <p>Smoked butter biryani paired with charred citrus salmon and pickled sides.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="cta" id="contact">
-            <div>
-                <h2>Stay in the FoodMunch loop</h2>
-                <p>Get launch invites, private tables, and chef collabs in your inbox.</p>
-            </div>
-            <form class="cta-form">
-                <label class="sr-only" for="emailInput">Email address</label>
-                <input id="emailInput" type="email" placeholder="you@example.com" required>
-                <button class="solid-btn" type="submit">Notify me</button>
-            </form>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>© <span id="year"></span> FoodMunch. Crafted for modern food lovers.</p>
-        <a class="text-link" href="#top">Back to top ↑</a>
+        <p>© <span id="year"></span> FoodMunch. Built for food lovers.</p>
+        <a class="text-link" href="#top">Back to top</a>
     </footer>
 </body>
 

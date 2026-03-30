@@ -4,188 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodMunch | Restaurant Discovery</title>
+    <title>FoodMunch | Like Zomato, For Real Cravings</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script defer src="assets/js/app.js"></script>
 </head>
 
 <body data-page="home">
-    <header class="hero" id="top">
-        <nav class="primary-nav">
+    <header class="masthead" id="top">
+        <nav class="top-nav">
             <a class="brand" href="FOOD WEBSITE.html">
                 <div class="brand-mark">FM</div>
                 <div>
                     <p class="brand-name">FoodMunch</p>
-                    <p class="brand-tag">Curated plates near you</p>
+                    <p class="brand-tagline">Find the best food & drinks in town</p>
                 </div>
             </a>
             <div class="nav-links">
-                <a href="#discover">Discover</a>
-                <a href="menu.html">Menu</a>
+                <a class="active" href="FOOD WEBSITE.html">Home</a>
+                <a href="menu.html">Order Online</a>
+                <a href="gallery.html">Dining & Nightlife</a>
                 <a href="order.html">Orders</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="#contact">Contact</a>
+                <a href="#collections">Collections</a>
             </div>
-            <button class="ghost-btn" type="button">Get the App</button>
+            <div class="nav-ctas">
+                <button class="ghost-btn" type="button">Log in</button>
+                <button class="solid-btn" type="button">Sign up</button>
+            </div>
         </nav>
-        <div class="hero-content">
-            <div class="hero-copy">
-                <p class="eyebrow">🌐 FoodMunch – Restaurant Discovery</p>
-                <h1>Find the next restaurant you will rave about.</h1>
-                <p class="lead">
-                    FoodMunch helps you browse chef-led kitchens, compare delivery times,
-                    and book the perfect table or takeaway from any device.
-                </p>
-                <div class="hero-cta">
-                    <a class="solid-btn" href="#discover">Start Exploring</a>
-                    <button class="ghost-btn" type="button">Book a tasting</button>
-                </div>
-                <ul class="hero-stats">
-                    <li>
-                        <span>250+</span>
-                        Curated menus
-                    </li>
-                    <li>
-                        <span>15 min</span>
-                        Avg. delivery
-                    </li>
-                    <li>
-                        <span>4.7★</span>
-                        Community rated
-                    </li>
-                </ul>
-            </div>
-            <div class="hero-panel">
-                <p class="panel-heading">Tonight in your city</p>
-                <div class="panel-card">
+
+        <div class="masthead-content">
+            <p class="eyebrow">India’s most loved dining workflow</p>
+            <h1>Discover the best food & drinks in <span id="cityHeading">Bengaluru</span></h1>
+            <form class="search-bar" id="heroSearchBar">
+                <label class="location-field">
+                    <span aria-hidden="true">📍</span>
+                    <select id="locationSelect" aria-label="Choose city">
+                        <option>Bengaluru</option>
+                        <option>Mumbai</option>
+                        <option>Delhi NCR</option>
+                        <option>Hyderabad</option>
+                        <option>Pune</option>
+                    </select>
+                </label>
+                <label class="dish-field">
+                    <span aria-hidden="true">🔍</span>
+                    <input type="search" id="heroSearch" placeholder="Search for restaurant, cuisine or a dish" aria-label="Search restaurants">
+                </label>
+            </form>
+            <div class="service-switch" id="homeServiceTabs" role="tablist" aria-label="Choose dining mode">
+                <button class="service-card active" type="button" data-service="delivery" role="tab" aria-selected="true">
+                    <div class="service-icon delivery"></div>
                     <div>
-                        <p class="panel-title">Chef's Counter</p>
-                        <p class="panel-desc">Seasonal tasting · 6 seats left</p>
+                        <strong>Order Online</strong>
+                        <span>Stay home and order to your door</span>
                     </div>
-                    <p class="panel-badge">Trending</p>
-                </div>
-                <div class="panel-card">
+                </button>
+                <button class="service-card" type="button" data-service="dining" role="tab" aria-selected="false">
+                    <div class="service-icon dining"></div>
                     <div>
-                        <p class="panel-title">Midnight Biryani Club</p>
-                        <p class="panel-desc">Delivery under 20 min</p>
+                        <strong>Dining Out</strong>
+                        <span>Experience the best tables in the city</span>
                     </div>
-                    <p class="panel-badge">Express</p>
-                </div>
-                <p class="panel-foot">Scroll to discover restaurants ↓</p>
+                </button>
+                <button class="service-card" type="button" data-service="nightlife" role="tab" aria-selected="false">
+                    <div class="service-icon nightlife"></div>
+                    <div>
+                        <strong>Nightlife & Clubs</strong>
+                        <span>Drinks, DJs, and long nights</span>
+                    </div>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="search-panel" id="discover">
-            <div class="panel-header">
+        <section class="popular-localities" id="localities">
+            <div class="section-head">
                 <div>
-                    <h2>Browse restaurants your way</h2>
-                    <p>Search, sort, and filter through curated partner kitchens.</p>
+                    <h2>Popular localities in and around Bengaluru</h2>
+                    <p>Explore curated guides by neighbourhood</p>
                 </div>
-                <button class="text-link" type="button" id="resetFilters">Reset filters</button>
+                <button class="text-link" type="button">See all areas</button>
             </div>
-            <div class="controls">
-                <label class="control">
-                    <span>Search</span>
-                    <input type="search" id="searchInput" placeholder="Try \"biryani\", \"ramen\", or \"vegan\"">
-                </label>
-                <label class="control">
-                    <span>Sort by</span>
-                    <select id="sortSelect">
-                        <option value="trending">Trending picks</option>
-                        <option value="rating">Highest rated</option>
-                        <option value="fastest">Fastest delivery</option>
-                        <option value="budget">Best value</option>
-                    </select>
-                </label>
-            </div>
-            <div class="chip-row" id="cuisineFilters" role="radiogroup" aria-label="Filter by cuisine">
-                <button class="chip active" data-cuisine="all" role="radio" aria-checked="true">All</button>
-                <button class="chip" data-cuisine="indian" role="radio" aria-checked="false">Indian</button>
-                <button class="chip" data-cuisine="asian" role="radio" aria-checked="false">Asian</button>
-                <button class="chip" data-cuisine="european" role="radio" aria-checked="false">European</button>
-                <button class="chip" data-cuisine="middle-eastern" role="radio" aria-checked="false">Middle Eastern</button>
-                <button class="chip" data-cuisine="vegan" role="radio" aria-checked="false">Plant based</button>
-            </div>
-            <p class="results" id="resultsCount">Loading restaurants…</p>
-        </section>
-
-        <section class="listings" aria-live="polite">
-            <div class="listing-grid" id="listingGrid"></div>
+            <div class="locality-grid" id="localityGrid"></div>
         </section>
 
         <section class="collections" id="collections">
             <div class="section-head">
                 <div>
-                    <p class="eyebrow">Continue exploring</p>
-                    <h2>Jump into the full FoodMunch experience</h2>
+                    <h2>Collections</h2>
+                    <p>Handpicked places for special moments</p>
                 </div>
+                <a class="text-link" href="menu.html">All collections →</a>
             </div>
-            <div class="collection-grid">
-                <article class="collection-card">
-                    <p class="badge">Menu</p>
-                    <h3>Menu Studio</h3>
-                    <p>See dish photography, ingredient notes, and wine-pair ideas in one place.</p>
-                    <a class="text-link" href="menu.html">Browse menu →</a>
-                </article>
-                <article class="collection-card">
-                    <p class="badge">Orders</p>
-                    <h3>Order Lab</h3>
-                    <p>Create a cart, unlock free delivery, and watch the rider tracker update live.</p>
-                    <a class="text-link" href="order.html">Build an order →</a>
-                </article>
-                <article class="collection-card">
-                    <p class="badge">Gallery</p>
-                    <h3>Visual Stories</h3>
-                    <p>Tour dining rooms and plating styles from our partner chefs and pop-ups.</p>
-                    <a class="text-link" href="gallery.html">Open gallery →</a>
-                </article>
-            </div>
+            <div class="collection-row" id="collectionRow"></div>
         </section>
 
-        <section class="how-it-works" id="how-it-works">
+        <section class="quick-picks" id="quickPicks">
             <div class="section-head">
                 <div>
-                    <p class="eyebrow">How it works</p>
-                    <h2>Your evening, simplified</h2>
+                    <h2>Inspiration for your first order</h2>
+                    <p>Fresh finds curated by cuisines</p>
                 </div>
             </div>
-            <ol class="steps">
-                <li>
-                    <h3>Discover</h3>
-                    <p>Search by cravings, mood, or dietary needs with live availability.</p>
-                </li>
-                <li>
-                    <h3>Compare</h3>
-                    <p>Check distance, delivery speed, and crowd rating before you book.</p>
-                </li>
-                <li>
-                    <h3>Enjoy</h3>
-                    <p>Track deliveries in real time or flash your booking QR at the door.</p>
-                </li>
-            </ol>
+            <div class="quick-filter-row" id="quickFilters"></div>
+            <div class="brand-strip" id="brandStrip"></div>
         </section>
 
-        <section class="cta" id="contact">
-            <div>
-                <h2>Stay in the FoodMunch loop</h2>
-                <p>Get launch invites, private tables, and chef collabs in your inbox.</p>
+        <section class="restaurant-feed" id="restaurants">
+            <div class="section-head">
+                <div>
+                    <h2>Best food near you</h2>
+                    <p>The most loved kitchens right now</p>
+                </div>
+                <label class="sort-control" for="homeSort">
+                    Sort by
+                    <select id="homeSort">
+                        <option value="rating">Rating: High to Low</option>
+                        <option value="deliveryTime">Delivery Time</option>
+                        <option value="cost">Cost for Two</option>
+                    </select>
+                </label>
             </div>
-            <form class="cta-form">
-                <label class="sr-only" for="emailInput">Email address</label>
-                <input id="emailInput" type="email" placeholder="you@example.com" required>
-                <button class="solid-btn" type="submit">Notify me</button>
-            </form>
+            <p class="results" id="homeResultsCount">Loading restaurants…</p>
+            <div class="restaurant-grid" id="homeRestaurantGrid"></div>
+        </section>
+
+        <section class="app-promo" id="app">
+            <div class="app-copy">
+                <h2>FoodMunch App</h2>
+                <p>Get exclusive offers, live order tracking, and faster checkouts just like the official Zomato app workflow.</p>
+                <form class="cta-form">
+                    <label class="sr-only" for="appEmail">Email address</label>
+                    <input id="appEmail" type="email" placeholder="you@example.com" required>
+                    <button class="solid-btn" type="submit">Send me the link</button>
+                </form>
+            </div>
+            <div class="app-visual">
+                <p class="badge">Live order tracking</p>
+                <h3>Track your rider in real time</h3>
+                <p>Stay informed with kitchen updates, delivery partner location, and OTP pickup.</p>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>© <span id="year"></span> FoodMunch. Crafted for modern food lovers.</p>
-        <a class="text-link" href="#top">Back to top ↑</a>
+        <p>© <span id="year"></span> FoodMunch. Built with the same care as Zomato.</p>
+        <a class="text-link" href="#top">Back to top</a>
     </footer>
 </body>
 
